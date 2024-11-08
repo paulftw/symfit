@@ -212,8 +212,8 @@ class ChainedMinimizer(BaseMinimizer):
         :param minimizers: a :class:`~collections.abc.Sequence` of
             :class:`~symfit.core.minimizers.BaseMinimizer` objects, which need
             to be run in order.
-        :param \*args: passed to :func:`symfit.core.minimizers.BaseMinimizer.__init__`.
-        :param \*\*kwargs: passed to :func:`symfit.core.minimizers.BaseMinimizer.__init__`.
+        :param *args: passed to :func:`symfit.core.minimizers.BaseMinimizer.__init__`.
+        :param **kwargs: passed to :func:`symfit.core.minimizers.BaseMinimizer.__init__`.
         '''
         super(ChainedMinimizer, self).__init__(*args, **kwargs)
         self.minimizers = minimizers
@@ -331,7 +331,7 @@ class ScipyMinimize(object):
             :class:`~symfit.core.minimizers.BoundedMinimizer`.
         :param jacobian: The Jacobian. Usually filled by
             :class:`~symfit.core.minimizers.ScipyGradientMinimize`.
-        :param \*\*minimize_options: Further keywords to pass to
+        :param **minimize_options: Further keywords to pass to
             :func:`scipy.optimize.minimize`. Note that your `method` will
             usually be filled by a specific subclass.
         """
@@ -791,7 +791,7 @@ class MINPACK(ScipyBoundedMinimizer, GradientMinimizer):
 
     def execute(self, jacobian=None, method='trf', **minpack_options):
         """
-        :param \*\*minpack_options: Any named arguments to be passed to
+        :param **minpack_options: Any named arguments to be passed to
             :func:`scipy.optimize.least_squares`
         """
         if jacobian is None:

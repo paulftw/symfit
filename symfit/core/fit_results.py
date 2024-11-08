@@ -33,7 +33,7 @@ class FitResults(object):
         :param minimizer: Minimizer instance used.
         :param objective: Objective function which was optimized.
         :param message: Status message returned by the minimizer.
-        :param \**minimizer_output: Raw output as given by the minimizer.
+        :param **minimizer_output: Raw output as given by the minimizer.
         """
         self.constraints = constraints if constraints is not None else []
         self.minimizer_output = minimizer_output

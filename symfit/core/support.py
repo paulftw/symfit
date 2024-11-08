@@ -295,9 +295,9 @@ def jacobian(expr, symbols):
 def key2str(target):
     """
     In ``symfit`` there are many dicts with symbol: value pairs.
-    These can not be used immediately as \*\*kwargs, even though this would make
+    These can not be used immediately as **kwargs, even though this would make
     a lot of sense from the context.
-    This function wraps such dict to make them usable as \*\*kwargs immediately.
+    This function wraps such dict to make them usable as **kwargs immediately.
 
     :param target: `Mapping` to be made save
     :return: `Mapping` of str(symbol): value pairs.

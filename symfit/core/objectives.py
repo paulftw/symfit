@@ -393,7 +393,7 @@ class HessianObjectiveJacApprox(HessianObjective):
     upon calculating ``eval_hessian``.
 
     However, if the model does not have a Hessian defined through
-    ``eval_hessian``, we approximate the Hessian as :math:`J^{T}\cdot J`,
+    ``eval_hessian``, we approximate the Hessian as :math:`J^{T}\\cdot J`,
     where :math:`J` is the Jacobian of the model. This approximation is valid
     when, amongst other things, the residuals are sufficiently small. It can
     therefore only be used after fitting, not during.
@@ -402,7 +402,7 @@ class HessianObjectiveJacApprox(HessianObjective):
     shape of the hessian of the model, when ``eval_hessian`` is called. This
     code injection will therefore result in the terms proportional to the
     hessian of the model dropping out, which leaves the famous
-    :math:`J^{T}\cdot J` approximation.
+    :math:`J^{T}\\cdot J` approximation.
     """
     def eval_hessian(self, ordered_parameters=[], **parameters):
         """
